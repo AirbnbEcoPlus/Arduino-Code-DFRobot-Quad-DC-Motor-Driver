@@ -52,8 +52,6 @@ void forwardAndTurn(int potar){
    if(potar < 512){
     Speed = map(valpot, 512, 0, initialSpeed, 255);
     Speed2 = map(valpot, 512, 0, initialSpeed, 0);
-    Serial.print("DROITE/Speed is : ");
-    Serial.println(Speed2);
     digitalWrite(M1,HIGH);
     analogWrite(E1,Speed);
     digitalWrite(M2,LOW);
@@ -67,8 +65,6 @@ void forwardAndTurn(int potar){
    if(potar > 512){
     Speed = map(valpot, 512, 1023, initialSpeed, 255);
     Speed2 = map(valpot, 512, 1023, initialSpeed, 0);
-    Serial.print("DROITE/Speed is : ");
-    Serial.println(Speed2);
     digitalWrite(M1,HIGH);
     analogWrite(E1, Speed2);
     digitalWrite(M2,LOW);
@@ -84,8 +80,6 @@ void backwardAndTurn(int potar){
    if(potar < 512){
     Speed = map(valpot, 512, 0, initialSpeed, 255);
     Speed2 = map(valpot, 512, 0, initialSpeed, 0);
-    Serial.print("DROITE/Speed is : ");
-    Serial.println(Speed2);
     digitalWrite(M1,LOW);
     analogWrite(E1,Speed);
     digitalWrite(M2,HIGH);
@@ -99,8 +93,6 @@ void backwardAndTurn(int potar){
    if(potar > 512){
     Speed = map(valpot, 512, 1023, initialSpeed, 255);
     Speed2 = map(valpot, 512, 1023, initialSpeed, 0);
-    Serial.print("DROITE/Speed is : ");
-    Serial.println(Speed2);
     digitalWrite(M1,LOW);
     analogWrite(E1, Speed2);
     digitalWrite(M2,HIGH);
